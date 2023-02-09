@@ -1,0 +1,10 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ü¬»øÿÿÿÿ
+Z	java:S106 "9Replace this use of System.out or System.err by a logger.(‚´›øÿÿÿÿ8ß£“Åâ0
+L
+java:S1144"/Remove this unused private "divideLBYL" method.(·¨ˆï8Çç‘Åâ0
+Q
+java:S1144"/Remove this unused private "divideEAFP" method.(çç´ßúÿÿÿÿ8Èç‘Åâ0
+M
+java:S1144("+Remove this unused private "divide" method.(©•ù²ıÿÿÿÿ8Èç‘Åâ0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ï¸ººÿÿÿÿÿ

@@ -1,0 +1,9 @@
+
+X	java:S125$"<This block of commented-out lines of code should be removed.(Ü¥ËÚ8Çìíåá0
+o	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ô€–øÿÿÿÿ8Éìíåá0
+o	java:S100L"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶€Ÿòûÿÿÿÿ8Ëìíåá0
+9
+java:S1643Y"Use a StringBuilder instead.(ïÊèï8Îìíåá0
+9
+java:S1643Z"Use a StringBuilder instead.(“É ñ8Ïìíåá0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®ş±øÿÿÿÿ

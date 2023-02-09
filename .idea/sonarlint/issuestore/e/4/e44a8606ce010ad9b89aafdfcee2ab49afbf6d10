@@ -1,0 +1,12 @@
+
+Y
+java:S1854">Remove this useless assignment to local variable "firstRobot".(¯º„ùÿÿÿÿ
+J
+java:S1481"/Remove this unused "firstRobot" local variable.(¯º„ùÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(òçšÂÿÿÿÿÿ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(Ä²‹øşÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(ŒÍ“ˆ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(˜Õã†úÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(ŒÍ“ˆ
+M	java:S106<"9Replace this use of System.out or System.err by a logger.(ĞÃœB
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(¯Şãùÿÿÿÿ8ÓÑŠëà0

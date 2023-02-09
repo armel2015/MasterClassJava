@@ -1,0 +1,11 @@
+
+j
+java:S3008
+"TRename this field "_instance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÇ¼ˆ
+2
+java:S1116"Remove this empty statement.(¯ê°
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Ì­¸
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Ó±é©8½¹™‰ã0
+U	java:S106"9Replace this use of System.out or System.err by a logger.(œ˜…8¾¹™‰ã0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÜÅÉÓÿÿÿÿÿ8¾¹™‰ã0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÅŸÊ¾şÿÿÿÿ

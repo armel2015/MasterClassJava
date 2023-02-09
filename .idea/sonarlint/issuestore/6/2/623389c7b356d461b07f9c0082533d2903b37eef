@@ -1,0 +1,15 @@
+
+m
+java:S1450"QRemove the "s1" field and declare it as a local variable in the relevant methods.(ŸÚø8›îÑëà0
+n
+java:S1450"QRemove the "s2" field and declare it as a local variable in the relevant methods.(‹œæ¾8œîÑëà0
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(€ÄÆˆ
+o
+java:S1210k"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(áİşô
+S	java:S106W"9Replace this use of System.out or System.err by a logger.(ıüš¾ûÿÿÿÿ
+N	java:S106a"9Replace this use of System.out or System.err by a logger.(Ú¡íÏ
+B
+java:S1068"&Remove this unused "s1" private field.(ŸÚø8®îÑëà0
+C
+java:S1068"&Remove this unused "s2" private field.(‹œæ¾8¯îÑëà0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜˜¢Óûÿÿÿÿ

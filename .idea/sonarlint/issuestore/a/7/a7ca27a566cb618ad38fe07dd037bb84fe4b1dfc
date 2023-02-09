@@ -1,0 +1,14 @@
+
+t
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰Õ–µûÿÿÿÿ
+V
+java:S1854";Remove this useless assignment to local variable "scanner".(ù ƒ‘üÿÿÿÿ
+G
+java:S1481",Remove this unused "scanner" local variable.(ù ƒ‘üÿÿÿÿ
+t
+java:S22932"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ó¶òıÿÿÿÿ
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(ßáì‚üÿÿÿÿ
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(™Äı»
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(¥­´ã
+U	java:S106N"9Replace this use of System.out or System.err by a logger.(åëú8í¶á0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†‹ŠÖşÿÿÿÿ

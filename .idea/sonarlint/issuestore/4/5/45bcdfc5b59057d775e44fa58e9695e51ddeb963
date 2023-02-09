@@ -1,0 +1,11 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ØúÍüÿÿÿÿ
+i
+java:S1104"SMake nbAutos a static final constant or non-public and provide accessors if needed.(ô²šÿ
+l
+java:S1104"VMake nbScooters a static final constant or non-public and provide accessors if needed.(ŠïÖÄ
+C
+java:S1444"-Make this "public static nbAutos" field final(ô²šÿ
+F
+java:S1444"0Make this "public static nbScooters" field final(ŠïÖÄ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³ÏÚúÿÿÿÿ

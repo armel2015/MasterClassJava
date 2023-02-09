@@ -1,0 +1,5 @@
+
+o	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áì¡èùÿÿÿÿ8ÁÂëåá0
+>
+java:S16437"Use a StringBuilder instead.(Ã×Õıÿÿÿÿ8ÅÂëåá0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®ş±øÿÿÿÿ
