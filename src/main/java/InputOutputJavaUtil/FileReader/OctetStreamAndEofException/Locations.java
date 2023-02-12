@@ -1,5 +1,4 @@
-package InputOutputJavaUtil.FileReader.WithBufferStream;
-
+package InputOutputJavaUtil.FileReader.OctetStreamAndEofException;
 
 import java.io.*;
 import java.util.*;
@@ -11,21 +10,57 @@ public class Locations implements Map<Integer, Location> {
     private static Map<Integer, Location> locations = new LinkedHashMap<Integer, Location>();
 
     public static void main(String[] args) throws IOException {
-        try(BufferedWriter locFile = new BufferedWriter(new FileWriter("locations.txt"));
-            BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))) {
-            for(Location location : locations.values()) {
-                locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
-                for(String direction : location.getExits().keySet()) {
-                    if(!direction.equalsIgnoreCase("Q")) {
-                        dirFile.write(location.getLocationID() + "," + direction + "," + location.getExits().get(direction) + "\n");
+        try (DataOutputStream locFile = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("locations.dat")))) {
+            for (Location location : locations.values()) {
+                locFile.writeInt(location.getLocationID());
+                locFile.writeUTF(location.getDescription());
+                System.out.println("Writing location " + location.getLocationID() + " : " + location.getDescription());
+                System.out.println("Writing " + (location.getExits().size() - 1) + " exits.");
+                locFile.writeInt(location.getExits().size() - 1);
+                for (String direction : location.getExits().keySet()) {
+                    if (!direction.equalsIgnoreCase("Q")) {
+                        System.out.println("\t\t" + direction + "," + location.getExits().get(direction));
+                        locFile.writeUTF(direction);
+                        locFile.writeInt(location.getExits().get(direction));
                     }
                 }
             }
         }
+
     }
 
     static {
 
+        // DEUXIEME FACON DE FAIRE AVEC LES STREAMS (DataInputStream ET BufferedInputStream)
+
+        /*try(DataInputStream locFile = new DataInputStream(new BufferedInputStream(new FileInputStream("locations.dat")))) {
+            boolean eof = false;
+            while(!eof) {
+                try {
+                    Map<String, Integer> exits = new LinkedHashMap<>();
+                    int locID = locFile.readInt();
+                    String description = locFile.readUTF();
+                    int numExits = locFile.readInt();
+                    System.out.println("Read location " + locID + " : " + description);
+                    System.out.println("Found " + numExits + " exits");
+                    for(int i=0; i<numExits; i++) {
+                        String direction = locFile.readUTF();
+                        int destination = locFile.readInt();
+                        exits.put(direction, destination);
+                        System.out.println("\t\t" + direction + "," + destination);
+                    }
+                    locations.put(locID, new Location(locID, description, exits));
+
+                } catch(EOFException e) {
+                    eof = true;
+                }
+
+            }
+        } catch(IOException io) {
+            System.out.println("IO Exception");
+        }*/
+
+        //PREMIERE FACON DE FAIRE AVEC Scanner ET BufferedReader
         try(Scanner scanner = new Scanner(new BufferedReader(new FileReader("locations_big.txt")))) {
             scanner.useDelimiter(",");
             while(scanner.hasNextLine()) {

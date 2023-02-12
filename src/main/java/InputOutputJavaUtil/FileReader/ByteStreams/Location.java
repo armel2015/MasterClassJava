@@ -1,5 +1,4 @@
-package InputOutputJavaUtil.FileReader.WithOutBufferStream;
-
+package InputOutputJavaUtil.FileReader.ByteStreams;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -7,12 +6,12 @@ import java.util.Map;
 /**
  * Created by dev on 8/12/2015.
  */
-public class Location2 {
+public class Location {
     private final int locationID;
     private final String description;
     private final Map<String, Integer> exits;
 
-    public Location2(int locationID, String description, Map<String, Integer> exits) {
+    public Location(int locationID, String description, Map<String, Integer> exits) {
         this.locationID = locationID;
         this.description = description;
         if(exits != null) {

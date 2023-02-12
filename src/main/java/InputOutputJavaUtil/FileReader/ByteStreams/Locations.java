@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.WithOutBufferStream;
+package InputOutputJavaUtil.FileReader.ByteStreams;
 
 import java.io.*;
 import java.util.*;
@@ -6,27 +6,21 @@ import java.util.*;
 /**
  * Created by timbuchalka on 2/04/2016.
  */
-public class Locations2 implements Map<Integer, InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2> {
-    private static Map<Integer, InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2> locations = new LinkedHashMap<Integer, InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2>();
+public class Locations implements Map<Integer, Location> {
+    private static Map<Integer, Location> locations = new LinkedHashMap<Integer, Location>();
 
     public static void main(String[] args) throws IOException {
-        try (DataOutputStream locFile = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("locations.dat")))) {
-            for (InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2 location : locations.values()) {
-                locFile.writeInt(location.getLocationID());
-                locFile.writeUTF(location.getDescription());
-                System.out.println("Writing location " + location.getLocationID() + " : " + location.getDescription());
-                System.out.println("Writing " + (location.getExits().size() - 1) + " exits.");
-                locFile.writeInt(location.getExits().size() - 1);
-                for (String direction : location.getExits().keySet()) {
-                    if (!direction.equalsIgnoreCase("Q")) {
-                        System.out.println("\t\t" + direction + "," + location.getExits().get(direction));
-                        locFile.writeUTF(direction);
-                        locFile.writeInt(location.getExits().get(direction));
+        try(BufferedWriter locFile = new BufferedWriter(new FileWriter("locations.txt"));
+            BufferedWriter dirFile = new BufferedWriter(new FileWriter("directions.txt"))) {
+            for(Location location : locations.values()) {
+                locFile.write(location.getLocationID() + "," + location.getDescription() + "\n");
+                for(String direction : location.getExits().keySet()) {
+                    if(!direction.equalsIgnoreCase("Q")) {
+                        dirFile.write(location.getLocationID() + "," + direction + "," + location.getExits().get(direction) + "\n");
                     }
                 }
             }
         }
-
     }
 
     static {
@@ -39,7 +33,7 @@ public class Locations2 implements Map<Integer, InputOutputJavaUtil.FileReader.W
                 String description = scanner.nextLine();
                 System.out.println("Imported loc: " + loc + ": " + description);
                 Map<String, Integer> tempExit = new HashMap<>();
-                locations.put(loc, new InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2(loc, description, tempExit));
+                locations.put(loc, new Location(loc, description, tempExit));
             }
 
         } catch(IOException e) {
@@ -56,7 +50,7 @@ public class Locations2 implements Map<Integer, InputOutputJavaUtil.FileReader.W
                 int destination = Integer.parseInt(data[2]);
 
                 System.out.println(loc + ": " + direction + ": " + destination);
-                InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2 location = locations.get(loc);
+                Location location = locations.get(loc);
                 location.addExit(direction, destination);
             }
         } catch (IOException e) {
@@ -84,22 +78,22 @@ public class Locations2 implements Map<Integer, InputOutputJavaUtil.FileReader.W
     }
 
     @Override
-    public InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2 get(Object key) {
+    public Location get(Object key) {
         return locations.get(key);
     }
 
     @Override
-    public InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2 put(Integer key, InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2 value) {
+    public Location put(Integer key, Location value) {
         return locations.put(key, value);
     }
 
     @Override
-    public InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2 remove(Object key) {
+    public Location remove(Object key) {
         return locations.remove(key);
     }
 
     @Override
-    public void putAll(Map<? extends Integer, ? extends InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2> m) {
+    public void putAll(Map<? extends Integer, ? extends Location> m) {
 
     }
 
@@ -115,12 +109,12 @@ public class Locations2 implements Map<Integer, InputOutputJavaUtil.FileReader.W
     }
 
     @Override
-    public Collection<InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2> values() {
+    public Collection<Location> values() {
         return locations.values();
     }
 
     @Override
-    public Set<Entry<Integer, InputOutputJavaUtil.FileReader.WithOutBufferStream.Location2>> entrySet() {
+    public Set<Entry<Integer, Location>> entrySet() {
         return locations.entrySet();
     }
 }

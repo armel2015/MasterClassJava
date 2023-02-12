@@ -1,6 +1,4 @@
-package InputOutputJavaUtil.FileReader;
-
-import InputOutputJavaUtil.FileReader.WithBufferStream.Locations;
+package InputOutputJavaUtil.FileReader.ByteStreams;
 
 import java.util.HashMap;
 import java.util.Map;
