@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.ByteStreams;
+package JavaFileSystemAndNIO.FileReader.ByteStreams;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

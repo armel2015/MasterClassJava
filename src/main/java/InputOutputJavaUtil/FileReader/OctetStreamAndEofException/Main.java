@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.OctetStreamAndEofException;
+package JavaFileSystemAndNIO.FileReader.OctetStreamAndEofException;
 
 import java.util.HashMap;
 import java.util.Map;

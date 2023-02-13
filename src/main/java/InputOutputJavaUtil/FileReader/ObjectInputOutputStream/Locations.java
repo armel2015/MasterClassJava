@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.ObjectInputOutputStream;
+package JavaFileSystemAndNIO.FileReader.ObjectInputOutputStream;
 
 import java.io.*;
 import java.util.*;

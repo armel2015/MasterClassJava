@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.ByteStreams;
+package JavaFileSystemAndNIO.FileReader.ByteStreams;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.JavaNIOFileSystemPath;
+package JavaFileSystemAndNIO.FileReader.JavaNIOFileSystemPath;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;

@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.OctetStreamAndEofException;
+package JavaFileSystemAndNIO.FileReader.OctetStreamAndEofException;
 
 /**
  * Created by timbuchalka on 19/05/2016.

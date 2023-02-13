@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.ObjectInputOutputStream;
+package JavaFileSystemAndNIO.FileReader.ObjectInputOutputStream;
 
 /**
  * Created by timbuchalka on 19/05/2016.

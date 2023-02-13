@@ -1,4 +1,4 @@
-package InputOutputJavaUtil.FileReader.ObjectInputOutputStream;
+package JavaFileSystemAndNIO.FileReader.ObjectInputOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
