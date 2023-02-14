@@ -1,4 +1,4 @@
-package JavaNetworking;
+package JavaNetworking.TCPprotocolWithSocket;
 
 import java.io.BufferedReader;
 import java.io.IOException;
