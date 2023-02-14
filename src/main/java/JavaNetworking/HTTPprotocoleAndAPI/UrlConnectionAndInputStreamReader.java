@@ -1,0 +1,35 @@
+package JavaNetworking.HTTPprotocoleAndAPI;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+public class UrlConnectionAndInputStreamReader {
+
+    public static void main(String[] args) {
+        try {
+            URL url = new URL("http://example.org");
+            URLConnection urlConnection = url.openConnection();
+            urlConnection.setDoOutput(true); //permet d'afficher le contenu
+            urlConnection.connect();
+
+            BufferedReader inputStream = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+           // BufferedReader inputStream = new BufferedReader(new InputStreamReader(url.openStream()));
+            String line = "";
+            while (line != null){
+
+                //lecture du contenu du site au format Html
+                line = inputStream.readLine();
+                System.out.println(line);
+            }
+            inputStream.close();
+        }catch (MalformedURLException e){
+            System.out.println("Malformed URL : " +e.getMessage());
+        }catch (IOException e){
+            System.out.println("IOException: " +e.getMessage());
+        }
+    }
+}
