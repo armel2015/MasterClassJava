@@ -1,0 +1,6 @@
+package JavaDesignPatterns.PatternComposee.MultiCastPattern.RecepteurAbstrait;
+
+import JavaDesignPatterns.PatternComposee.MultiCastPattern.Message.MessageCommercial;
+
+public interface RecepteurCommercial extends RecepteurAbstrait<MessageCommercial>{
+}

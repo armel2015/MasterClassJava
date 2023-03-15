@@ -1,0 +1,8 @@
+package JavaDesignPatterns.PatternComposee.MultiCastPattern.Expediteur;
+
+import JavaDesignPatterns.PatternComposee.MultiCastPattern.ExpediteurAbstrait.ExpediteurAbstrait;
+import JavaDesignPatterns.PatternComposee.MultiCastPattern.Message.MessageCommercial;
+import JavaDesignPatterns.PatternComposee.MultiCastPattern.RecepteurAbstrait.RecepteurCommercial;
+
+public class ExpediteurCommercial extends ExpediteurAbstrait<MessageCommercial, RecepteurCommercial> {
+}

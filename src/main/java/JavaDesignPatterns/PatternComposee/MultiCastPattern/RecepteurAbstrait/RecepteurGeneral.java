@@ -1,0 +1,7 @@
+package JavaDesignPatterns.PatternComposee.MultiCastPattern.RecepteurAbstrait;
+
+import JavaDesignPatterns.PatternComposee.MultiCastPattern.Message.MessageGeneral;
+import JavaDesignPatterns.PatternComposee.MultiCastPattern.RecepteurAbstrait.RecepteurAbstrait;
+
+public interface RecepteurGeneral extends RecepteurAbstrait<MessageGeneral> {
+}
